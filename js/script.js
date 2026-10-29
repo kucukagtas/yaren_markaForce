@@ -187,4 +187,17 @@ document.addEventListener('DOMContentLoaded', function () {
   revealElements.forEach(function (el) {
     revealObserver.observe(el);
   });
+
+  // disable image right click & drag
+  document.addEventListener('contextmenu', function (event) {
+    if (event.target.tagName === 'IMG') {
+      event.preventDefault();
+    }
+  });
+
+  document.addEventListener('dragstart', function (event) {
+    if (event.target.tagName === 'IMG') {
+      event.preventDefault();
+    }
+  });
 });
