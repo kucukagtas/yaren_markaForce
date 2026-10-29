@@ -1,12 +1,13 @@
 /* variables */
 :root {
-  --main-green: #AEAC78;
-  --main-light: #FCF0DA;
-  --main-yellow: #F2C46A;
-  --main-black: #4C4541;
+  --main-green: #aeac78;
+  --main-light: #fcf0da;
+  --main-yellow: #f2c46a;
+  --main-black: #4c4541;
 
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans:
+    "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
 
   --transition-normal: all 0.3s ease;
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -33,7 +34,12 @@ body {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, .font-playfair {
+h1,
+h2,
+h3,
+h4,
+h5,
+.font-playfair {
   font-family: var(--font-serif);
 }
 
@@ -246,7 +252,7 @@ img {
 /* intro */
 .hero-section {
   background-color: var(--main-black);
-  background-image: url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1600&auto=format&fit=crop&q=80');
+  background-image: url("https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1600&auto=format&fit=crop&q=80");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -312,9 +318,19 @@ img {
 }
 
 @keyframes bounceDown {
-  0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
-  40% { transform: translate(-50%, -10px); }
-  60% { transform: translate(-50%, -5px); }
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  40% {
+    transform: translate(-50%, -10px);
+  }
+  60% {
+    transform: translate(-50%, -5px);
+  }
 }
 
 /* about us */
@@ -360,7 +376,8 @@ img {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -703,9 +720,18 @@ img {
 
 /* form animations */
 @keyframes shakeAnimation {
-  0%, 100% { transform: translateX(0); }
-  20%, 60% { transform: translateX(-12px); }
-  40%, 80% { transform: translateX(12px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-12px);
+  }
+  40%,
+  80% {
+    transform: translateX(12px);
+  }
 }
 
 .animate-shake {
@@ -715,9 +741,17 @@ img {
 }
 
 @keyframes successPop {
-  0% { transform: scale(0.98); opacity: 0.85; }
-  50% { transform: scale(1.01); }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(0.98);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .animate-success {
@@ -813,7 +847,9 @@ img {
 .reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
