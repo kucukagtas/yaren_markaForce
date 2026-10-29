@@ -3,6 +3,8 @@
 > **"Her fincanda ortak bir hikâye."**  
 > Geleneksel Türk kahvesi kültürünü espresso ve 3. nesil modern demleme sanatıyla aynı masada buluşturan **Yâren** markası için geliştirilmiş, modern, sıcak ve tam duyarlı (responsive) tek sayfa web uygulaması.
 
+🌐 **Canlı Site (Live Demo):** [https://kucukagtas.github.io/yaren_markaForce/](https://kucukagtas.github.io/yaren_markaForce/)
+
 ---
 
 ## 1. Yönetici Özeti

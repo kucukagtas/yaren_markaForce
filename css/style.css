@@ -482,7 +482,13 @@ h1, h2, h3, h4, h5, .font-playfair {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   transition: transform 0.6s ease;
+}
+
+.discover-img[src*="kavurma"],
+.discover-img[src*="demleme"] {
+  object-position: center 56%;
 }
 
 .discover-box:hover .discover-img {
@@ -518,7 +524,7 @@ h1, h2, h3, h4, h5, .font-playfair {
   display: flex;
   flex-direction: column;
   height: 100%;
-  min-height: 275px;
+  min-height: 290px;
 }
 
 .menu-card-vertical:hover {
@@ -533,15 +539,44 @@ h1, h2, h3, h4, h5, .font-playfair {
 
 .menu-img-wrap-vertical {
   position: relative;
-  height: 155px;
+  height: 185px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu-card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
+  display: block;
   transition: transform 0.5s ease;
+}
+
+.menu-card-img[src*="TurkishCoffee"] {
+  object-position: center 55%;
+}
+
+.menu-card-img[src*="espresso"] {
+  object-position: center 68%;
+}
+
+.menu-card-img[src*="filtre"] {
+  object-position: center 48%;
+}
+
+.menu-card-img[src*="v60"] {
+  object-position: center 36%;
+}
+
+.menu-card-img[src*="flatwhite"] {
+  object-position: center 38%;
+}
+
+.menu-card-img[src*="coldbrew"] {
+  object-position: center 52%;
 }
 
 .menu-card-vertical:hover .menu-card-img {
@@ -781,29 +816,77 @@ h1, h2, h3, h4, h5, .font-playfair {
 }
 
 /* mobile responsive */
+@media (min-width: 992px) and (max-height: 820px) {
+  .flip-card {
+    height: 410px;
+  }
+
+  .discover-box {
+    min-height: 390px;
+    padding: 20px 18px;
+  }
+
+  .discover-img-container {
+    height: 190px;
+  }
+
+  .menu-card-vertical {
+    min-height: 260px;
+  }
+
+  .menu-img-wrap-vertical {
+    height: 160px;
+  }
+
+  .contact-split-form {
+    padding: 80px 2.5rem 2rem 2.5rem;
+  }
+}
+
 @media (max-width: 991.98px) {
   .section-full {
     height: auto !important;
     min-height: 100vh;
     padding-top: 95px;
-    padding-bottom: 40px;
+    padding-bottom: 45px;
   }
 
   .navbar-grid-wrapper {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .nav-col-center {
+    grid-column: 2;
+  }
+
+  .navbar-toggler-custom {
+    grid-column: 3;
+    justify-self: end;
+  }
+
+  .hero-section {
+    background-attachment: scroll;
   }
 
   .hero-heading {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
 
   .hero-subtitle {
-    font-size: 1.35rem;
+    font-size: 1.4rem;
   }
 
   .flip-card {
-    height: 380px;
+    height: 400px;
+  }
+
+  .discover-box {
+    min-height: auto;
+  }
+
+  .menu-img-wrap-vertical {
+    height: 200px;
   }
 
   .contact-footer-combined {
@@ -819,14 +902,14 @@ h1, h2, h3, h4, h5, .font-playfair {
   .contact-split-media {
     display: flex !important;
     width: 100%;
-    height: 240px;
-    flex: 0 0 240px;
+    height: 260px;
+    flex: 0 0 260px;
   }
 
   .contact-split-form {
     flex: 1 1 auto;
     width: 100%;
-    padding: 2.5rem 1.5rem;
+    padding: 2.5rem 2rem;
   }
 
   .btn-back-to-top {
@@ -835,5 +918,80 @@ h1, h2, h3, h4, h5, .font-playfair {
     width: 44px;
     height: 44px;
     font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .menu-grid > .col {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  .hero-heading {
+    font-size: 2.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .flip-card {
+    height: 360px;
+  }
+
+  .card-back-title {
+    font-size: 1.5rem;
+  }
+
+  .card-back-text {
+    font-size: 0.96rem;
+    line-height: 1.6;
+  }
+
+  .flip-hint-badge {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .menu-img-wrap-vertical {
+    height: 215px;
+  }
+
+  .contact-split-media {
+    height: 210px;
+    flex: 0 0 210px;
+  }
+
+  .contact-split-form {
+    padding: 2rem 1.25rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .yaren-brand .brand-title {
+    font-size: 1.65rem;
+  }
+
+  .yaren-brand .brand-slogan {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+  }
+
+  .hero-content .btn-lg {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 20px !important;
   }
 }
